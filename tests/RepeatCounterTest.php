@@ -16,7 +16,7 @@
             $result = $test_RepeatCounter->countRepeats($input_word, $input_string);
 
             //Assert
-            $this->assertEquals("k", 1, $result);
+            $this->assertEquals(1, $result);
         }
     }
 

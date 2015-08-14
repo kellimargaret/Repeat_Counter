@@ -2,24 +2,24 @@ Specs for Word Match for RepeatCounter class with counts Repeats method.
 
 1. Behavior: Input the same letter into both fields to receive a successful match.
     Input: k, k
-    Output: k, 1 match
+    Output: 1 match
 
 2. Behavior: Input the same word into both fields to receive a successful match.
     Input: "hello", "hello"
-    Output: "hello", 1 match
+    Output: 1 match
 
 3. Behavior: Receive successful match on word regardless of case used.
     Input: "PORTLAND", "portland"
-    Output: "portland", 1 match
+    Output: 1 match
 
 4. Behavior: Receive successful match for a word when it is found in a string of words.
     Input: "Disneyland", "We are going to Disneyland"
-    Output: "Disneyland", 1 match
+    Output: 1 match
 
 5. Behavior: Receive successful match when a word is used multiple times in a string of words.
     Input: "House", "My house is your house"
-    Output: "House", 2 matches
+    Output: 2 matches
 
 6. Behavior: No matches for partial words
     Input: "Awesome", "Aw"
-    Output: "No matches", 0 matches
+    Output: 0 matches
