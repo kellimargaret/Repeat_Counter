@@ -62,7 +62,21 @@
 
             //Assert
             $this->assertEquals(2, $result);
+        }
 
+        //No matches for partial words
+        function test_partialWord()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $input_word = "Awesome";
+            $input_string = " Awe that is awesome";
+
+            //Act
+            $result = $test_RepeatCounter->countRepeats($input_word, $input_string);
+
+            //Assert
+            $this->assertEquals(1, $result);
         }
     }
 
