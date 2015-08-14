@@ -11,14 +11,19 @@
             $string = strtolower($string);
 
             $string_array = explode(" ", $string);
+            $repeat_words = array();
 
-            foreach ($string_array as $word_string) {
-                if ($word_string == $word) {
-                    $match.= +1;
+            if (!in_array($word, $string_array)) {
+                return "No match!";
+            } else {
+                foreach ($string_array as $word_string) {
+                    if ($word == $word_string) {
+                        array_push($repeat_words, $word_string);
+                    }
                 }
             }
 
-            return $match;
+            return count($repeat_words);
         }
     }
 
