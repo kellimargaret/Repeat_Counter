@@ -4,7 +4,7 @@
 
     class TestRepeatCounter extends PHPUnit_Framework_TestCase
     {
-        //Match single letters.
+        //Input the same letter into both fields to receive a successful match.
         function test_oneLetterMatch()
         {
             //Arrange
@@ -19,7 +19,7 @@
             $this->assertEquals(1, $result);
         }
 
-        //Match same word no matter the case
+        //Input the same word, no matter the case, into both fields to receive a successful match.
         function test_caseWordMatch()
         {
             //Arrange
@@ -29,6 +29,18 @@
 
             //Act
             $result = $test_RepeatCounter->countRepeats($input_word, $input_string);
+
+            //Assert
+            $this->assertEquals(1, $result);
+        }
+
+        //Receive successful match for a word when it is found in a string of words.
+        function test_wordInStringMatch()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $input_word = "Disneyland";
+            $input_string = "We are going to Disneyland";
 
             //Assert
             $this->assertEquals(1, $result);
