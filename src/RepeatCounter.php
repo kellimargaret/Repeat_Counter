@@ -23,6 +23,8 @@
                 }
             }
 
+            
+
             return count($repeat_words);
         }
     }
