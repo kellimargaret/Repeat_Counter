@@ -18,6 +18,21 @@
             //Assert
             $this->assertEquals(1, $result);
         }
+
+        //Match same word no matter the case
+        function test_caseWordMatch()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $input_word = "HELLO";
+            $input_string = "hello";
+
+            //Act
+            $result = $test_RepeatCounter->countRepeats($input_word, $input_string);
+
+            //Assert
+            $this->assertEquals(1, $result);
+        }
     }
 
 ?>
