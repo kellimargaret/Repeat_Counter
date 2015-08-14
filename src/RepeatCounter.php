@@ -10,10 +10,12 @@
             $word = strtolower($word);
             $string = strtolower($string);
 
-            if ($word == $string) {
-                $match = $match + 1;
-            } else {
-                return "No matches";
+            $string_array = explode(" ", $string);
+
+            foreach ($string_array as $word_string) {
+                if ($word_string == $word) {
+                    $match.= +1;
+                }
             }
 
             return $match;

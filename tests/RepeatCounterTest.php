@@ -16,7 +16,7 @@
             $result = $test_RepeatCounter->countRepeats($input_word, $input_string);
 
             //Assert
-            $this->assertEquals(1, $result);
+            $this->assertEquals("1", $result);
         }
 
         //Input the same word, no matter the case, into both fields to receive a successful match.
@@ -31,7 +31,7 @@
             $result = $test_RepeatCounter->countRepeats($input_word, $input_string);
 
             //Assert
-            $this->assertEquals(1, $result);
+            $this->assertEquals("1", $result);
         }
 
         //Receive successful match for a word when it is found in a string of words.
@@ -41,9 +41,11 @@
             $test_RepeatCounter = new RepeatCounter;
             $input_word = "Disneyland";
             $input_string = "We are going to Disneyland";
+            //Act
+            $result = $test_RepeatCounter->countRepeats($input_word, $input_string);
 
             //Assert
-            $this->assertEquals(1, $result);
+            $this->assertEquals("1", $result);
         }
     }
 
